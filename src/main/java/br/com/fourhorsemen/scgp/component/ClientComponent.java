@@ -37,4 +37,8 @@ public class ClientComponent {
 	public List<Client> findByName(String name) {
 		return clientRepository.findByName(name);
 	}
+
+	public void delete(String id) {
+		clientRepository.deleteById(id);;
+	}
 }

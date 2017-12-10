@@ -3,6 +3,7 @@ package br.com.fourhorsemen.scgp.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -35,5 +36,12 @@ public class ClientController {
 	@RequestMapping(value = "name/{name}")
 	public List<Client> findByName(@PathVariable(value="name") String name) {
 		return clientComponent.findByName(name);
+	}
+	
+	@DeleteMapping
+	@RequestMapping(value = "{id}")
+	public String delete(@PathVariable(value="id") String id) {
+		clientComponent.delete(id);
+		return id;
 	}
 }
