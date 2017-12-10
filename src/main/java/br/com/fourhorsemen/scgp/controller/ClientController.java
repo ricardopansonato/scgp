@@ -21,8 +21,9 @@ public class ClientController {
 	private ClientComponent clientComponent;
 	
 	@PostMapping
-	public void save(@RequestBody Client client) {
+	public Client save(@RequestBody Client client) {
 		clientComponent.save(client);
+		return client;
 	}
 	
 	@GetMapping
