@@ -1,4 +1,4 @@
-package br.com.fourhorseman.scgp;
+package br.com.fourhorsemen.scgp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
